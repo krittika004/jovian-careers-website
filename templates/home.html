@@ -2,6 +2,9 @@
 <html>
   <head>
     <tile></tile>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
       h1{
         font-size: 40px;
@@ -9,6 +12,7 @@
         font-weight: bold;
         color:rgb(0,0,0);
         text-align:center;
+        margin:40px;
       }
       #pic1{
         width: 100%;
@@ -23,6 +27,7 @@
         text-align:center;
       }
       #about{
+        font-size: 18px;
         text-align:center;
       }
       #container{
@@ -37,13 +42,15 @@
     <img id="pic1" src="https://2f09dc45-53b4-4171-892e-a1cd02aa99c8-00-7c53bv5fadud.kirk.replit.dev/static/pic1.jpeg"
       height="320">
     <h2>About CareerQuest</h2>
-    <p id="about",class="lead">
+    <p id="about" class="lead">
       CareerQuest is your all-in-one platform for discovering, developing, and advancing your career. We’re here to help you navigate the job market with confidence, offering expert resources, industry insights, and personalized guidance tailored to your unique goals. Whether you're a recent graduate, an experienced professional, or someone considering a career change, CareerQuest provides the tools and support you need to succeed. Our mission is to help you build valuable skills, connect with the right opportunities, and take actionable steps toward your dream job. Let’s transform your career journey together, one quest at a time. Join us and start your journey toward professional growth and fulfillment!
     </p>
     <h2>Open Positions</h2>
-    <p>Frontend Developer</p>
-      <div style="text-align:right;">
-    <button>Contact Us</button>
+    {% for job in jobs%}
+      {% include 'jobitem.html' %}
+    {%endfor%}
+      <div class="text-end">
+    <button class="btn btn-primary btn-sm">Contact Us</button>
       </div>
     </div>
   </body>
