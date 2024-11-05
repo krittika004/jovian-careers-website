@@ -1,9 +1,14 @@
-<div style="margin-bottom:20px;">
-  <h5 style="margin-bottom:4px;">{{job['title']}}</h5>
-  <div>
-    <h6 style="color: rgb(120, 120,120);margin-bottom:4px;">Location:{{job['location']}}</h6>
+<div class="border-bottom row" style="margin-bottom:20px;padding-bottom:10px">
+  <div class="col-10">
+    <h5 style="margin-bottom:4px;">{{job['title']}}</h5>
+    <div>
+      <h6 style="color: rgb(120, 120,120);margin-bottom:4px;">Location:{{job['location']}}</h6>
+    </div>
+    <div>
+     <b>Salary</b>{{job['salary']}} 
+    </div>
   </div>
-  <div>
-   <b>Salary</b>{{job['salary']}} 
+  <div class="col-2">
+    <button type="button" class="btn btn-outline-success">Apply</button>
   </div>
 </div>
