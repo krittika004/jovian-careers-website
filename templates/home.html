@@ -12,12 +12,11 @@
         font-weight: bold;
         color:rgb(0,0,0);
         text-align:center;
-        margin:40px;
+        margin:0;
       }
       #pic1{
         width: 100%;
-        height: 360px;
-        object-fit: cover;
+        height: 420px;
       }
       h2{
         font-size: 25px;
@@ -27,7 +26,7 @@
         text-align:center;
       }
       #about{
-        font-size: 18px;
+        font-size: 15px;
         text-align:center;
       }
       #container{
@@ -35,23 +34,32 @@
         margin: 0 auto;
       }
     </style>
+    <img id="pic1" src="https://2f09dc45-53b4-4171-892e-a1cd02aa99c8-00-7c53bv5fadud.kirk.replit.dev/static/pic1.jpeg"
+      height="400">
   </head>
   <body>
+    {% include 'nav.html' %}
     <div id="container">
     <h1>CareerQuest</h1>
-    <img id="pic1" src="https://2f09dc45-53b4-4171-892e-a1cd02aa99c8-00-7c53bv5fadud.kirk.replit.dev/static/pic1.jpeg"
-      height="320">
-    <h2>About CareerQuest</h2>
+    <h2>About</h2>
+    <div class="row" style="margin-bottom:16px">
+      <div class="col-5">
     <p id="about" class="lead">
       CareerQuest is your all-in-one platform for discovering, developing, and advancing your career. We’re here to help you navigate the job market with confidence, offering expert resources, industry insights, and personalized guidance tailored to your unique goals. Whether you're a recent graduate, an experienced professional, or someone considering a career change, CareerQuest provides the tools and support you need to succeed. Our mission is to help you build valuable skills, connect with the right opportunities, and take actionable steps toward your dream job. Let’s transform your career journey together, one quest at a time. Join us and start your journey toward professional growth and fulfillment!
     </p>
+      </div>
+      <div class="col-1">
+      <img src="/static/people.jpg" style="height:365px;width:500px " >
+      </div>
+    </div>
     <h2>Open Positions</h2>
     {% for job in jobs%}
       {% include 'jobitem.html' %}
     {%endfor%}
       <div class="text-center">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
+    <a href="mailto:duttakrittika9@gmail.com?subject=Question%20about%20job%20openings&body=My%20Name%3A%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Question%3A%3Cyour%20question%20here%3E%0D%0A%0D%0A" class="btn btn-primary btn-lg">Contact Us</a>
       </div>
     </div>
   </body>
+  {% include 'footer.html' %}
 </html>
